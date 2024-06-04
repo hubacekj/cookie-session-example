@@ -1,40 +1,33 @@
-# Turborepo kitchen sink starter
+# Cookie session example mono repo
 
-This is an official starter Turborepo with multiple meta-frameworks all working in harmony and sharing packages.
-
-This example also shows how to use [Workspace Configurations](https://turbo.build/repo/docs/core-concepts/monorepos/configuring-workspaces).
+This mono repository is a minimal example of session based authentication using http-only cookies.
 
 ## Using this example
 
-Run the following command:
+You need to install Bun to run both the server and the client without additional changes.
+Refer to the [Bun official documentation](https://bun.sh/guides/getting-started).
+
+Then, run the following commands:
 
 ```sh
-npx create-turbo@latest -e kitchen-sink
+bun install
+```
+
+```sh
+bun run dev
 ```
 
 ## What's inside?
 
-This Turborepo includes the following packages and apps:
+This mono repo includes the following packages and apps:
 
 ### Apps and Packages
 
-- `api`: an [Express](https://expressjs.com/) server
-- `storefront`: a [Next.js](https://nextjs.org/) app
-- `admin`: a [Vite](https://vitejs.dev/) single page app
-- `blog`: a [Remix](https://remix.run/) blog
+- `api`: a [Hono](https://hono.dev/top) authentication server
+- `admin`: a [Vite](https://vitejs.dev/) single page React app
+
 - `@repo/eslint-config`: ESLint configurations used throughout the monorepo
 - `@repo/jest-presets`: Jest configurations
-- `@repo/logger`: isomorphic logger (a small wrapper around console.log)
-- `@repo/ui`: a dummy React UI library (which contains `<CounterButton>` and `<Link>` components)
 - `@repo/typescript-config`: tsconfig.json's used throughout the monorepo
 
 Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Jest](https://jestjs.io) test runner for all things JavaScript
-- [Prettier](https://prettier.io) for code formatting
